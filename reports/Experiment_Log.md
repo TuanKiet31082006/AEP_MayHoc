@@ -27,6 +27,14 @@
 - Kiểm tra giá trị thiếu bằng `isnull().sum()`.
 - Kiểm tra dòng trùng lặp bằng `duplicated().sum()`.
 
+Kết quả kiểm tra ban đầu:
+- Tổng số giá trị thiếu: 0.
+- Tổng số dòng trùng lặp: 0.
+
+Sau khi tạo các đặc trưng lag_1 và rolling_mean:
+- Phát sinh 4 giá trị thiếu do không đủ dữ liệu quá khứ.
+- Tiến hành loại bỏ 3 dòng đầu tiên chưa có đủ dữ liệu quá khứ.
+- Sau xử lý, dữ liệu không còn giá trị thiếu.
 ### 2.3. Trực quan hóa dữ liệu
 
 Đã thực hiện 6 biểu đồ:
@@ -127,15 +135,22 @@ Kết quả:
 Sau khi điều chỉnh, mô hình thực hiện dự đoán thành công trên tập kiểm tra và có thể tiếp tục sử dụng kết quả để đánh giá hiệu suất.
 ### 7.6. Trực quan hóa kết quả dự đoán
 
-Sau khi hoàn thành quá trình dự đoán, nhóm tiến hành trực quan hóa kết quả nhằm đánh giá trực quan khả năng dự đoán của mô hình Linear Regression.
+Sau khi huấn luyện và lựa chọn mô hình Linear Regression,
+nhóm tiến hành trực quan hóa kết quả dự đoán trong Notebook 02.
 
 Nhóm sử dụng hai biểu đồ:
 
-Actual vs Predicted: So sánh giá trị tiêu thụ năng lượng thực tế với giá trị do mô hình dự đoán.
+- Actual vs Predicted: So sánh giá trị thực tế với giá trị dự đoán.
+- Residual Plot: Thể hiện sự phân bố sai số giữa giá trị thực tế
+  và giá trị dự đoán.
 
-Residual Plot: Thể hiện phần sai số giữa giá trị thực tế và giá trị dự đoán, giúp quan sát mức độ phân bố sai số của mô hình.
+Hai biểu đồ được tạo và lưu trong thư mục `images/`:
 
-Các biểu đồ được lưu trong thư mục images/ để phục vụ việc phân tích và đánh giá kết quả thực nghiệm.
+- `images/actual_vs_predicted.png`
+- `images/residual_plot.png`
+
+Notebook 03 tiếp tục sử dụng mô hình đã lưu để thực hiện dự đoán,
+đánh giá kết quả và xuất dữ liệu dự đoán ra file CSV.
 ### 7.7. Nhận xét và phân tích kết quả thực nghiệm
 
 Dựa trên kết quả đánh giá năm mô hình, nhóm đưa ra một số nhận xét như sau:
