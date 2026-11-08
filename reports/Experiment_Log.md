@@ -71,14 +71,41 @@
 - Vị trí lưu: `data/processed/`.
 - Các biểu đồ được lưu trong thư mục `images/`.
 
-## 7. Công việc chưa thực hiện
+## 7. Kết quả xây dựng và đánh giá mô hình
 
-- Chưa chia dữ liệu thành tập huấn luyện và kiểm tra.
-- Chưa chuẩn hóa dữ liệu.
-- Chưa huấn luyện mô hình hồi quy.
-- Chưa đánh giá kết quả mô hình.
+### 7.1. Chia dữ liệu
+- Sử dụng dữ liệu sau tiền xử lý `appliances_processed.csv`.
+- Biến mục tiêu: `Appliances`.
+- Loại bỏ cột `date` khỏi tập đặc trưng đầu vào.
+- Chia dữ liệu theo thứ tự thời gian với tỷ lệ 80% Train và 20% Test.
+- Tập Train: 15.785 mẫu.
+- Tập Test: 3.947 mẫu.
 
-Các công việc này sẽ được phối hợp thực hiện trong giai đoạn xây dựng và đánh giá mô hình.
+### 7.2. Các mô hình đã thử nghiệm
+
+Nhóm đã thực hiện huấn luyện và đánh giá 5 mô hình:
+- Baseline: DummyRegressor với chiến lược dự đoán giá trị trung bình.
+- Linear Regression: mô hình hồi quy tuyến tính.
+- Ridge Regression: sử dụng StandardScaler và Ridge với alpha = 1.0.
+- Random Forest: n_estimators = 100, max_depth = 15, random_state = 42.
+- Gradient Boosting: n_estimators = 100, learning_rate = 0.1, max_depth = 3, random_state = 42.
+
+### 7.3. Kết quả đánh giá
+
+| Mô hình | MAE | RMSE | R² |
+|---|---:|---:|---:|
+| Baseline | 52.689 | 91.054 | -0.000 |
+| Linear Regression | 29.010 | 62.005 | 0.536 |
+| Ridge Regression | 29.012 | 62.005 | 0.536 |
+| Random Forest | 77.332 | 114.374 | -0.578 |
+| Gradient Boosting | 110.903 | 144.916 | -1.533 |
+
+### 7.4. Kết quả lựa chọn mô hình
+- Linear Regression được lựa chọn làm mô hình tốt nhất trong các mô hình đã thử nghiệm.
+- Mô hình đạt MAE = 29.010, RMSE = 62.005 và R² = 0.536.
+- Mô hình được lưu tại `models/best_model.pkl`.
+- Kết quả dự đoán được lưu tại `reports/prediction_results.csv`.
+- Các biểu đồ Actual vs Predicted và Residual Plot được lưu trong thư mục `images/`.
 
 ## 8. Tài liệu thực hiện
 
