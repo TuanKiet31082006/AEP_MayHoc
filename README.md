@@ -92,40 +92,16 @@ Vì vậy, Linear Regression được lựa chọn làm mô hình dự đoán t�
 - **Lưu trữ mô hình:** Joblib/Pickle.
 - **Quản lý mã nguồn:** Git và GitHub.
 
-## 6. Cấu trúc thư mục dự án
+## 6. Cài đặt và sử dụng
 
-AEP_MayHoc/
-│
-├── data/
-│   ├── raw/
-│   └── processed/
-│
-├── notebooks/
-│   ├── 01_EDA_Preprocessing.ipynb
-│   ├── 02_Modeling.ipynb
-│   └── 03_Prediction.ipynb
-│
-├── images/
-│
-├── models/
-│   └── best_model.pkl
-│
-├── reports/
-│   └── prediction_results.csv
-│
-├── README.md
-└── requirements.txt
-
-## 7. Cài đặt và sử dụng
-
-### 7.1. Clone dự án
+### 6.1. Clone dự án
 
 ```bash
 git clone https://github.com/TuanKiet31082006/AEP_MayHoc.git
 cd AEP_MayHoc
 pip install -r requirements.txt
 
-### 7.4. Thực hiện dự án
+### 6.2. Thực hiện dự án
 
 Mở Jupyter Notebook và lần lượt thực hiện các tệp sau:
 
@@ -155,7 +131,7 @@ Kết quả dự án là cơ sở để tìm hiểu và ứng dụng các phươ
 
 **Giảng viên hướng dẫn:** Đỗ Như Tài.
 
-**Thành viên:** Nhóm 2.
+**Thành viên:** Nhóm 27.
 
-- Thành viên A: Khám phá dữ liệu, phân tích dữ liệu và tiền xử lý dữ liệu.
-- Thành viên B: Xây dựng, huấn luyện, đánh giá mô hình và thực hiện dự đoán.
+- Nguyễn Tuấn Kiệt: Khám phá dữ liệu, phân tích dữ liệu và tiền xử lý dữ liệu.
+- Dương Hùng Đại: Xây dựng, huấn luyện, đánh giá mô hình và thực hiện dự đoán.
