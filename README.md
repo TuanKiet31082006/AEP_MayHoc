@@ -100,7 +100,7 @@ Vì vậy, Linear Regression được lựa chọn làm mô hình dự đoán t�
 git clone https://github.com/TuanKiet31082006/AEP_MayHoc.git
 cd AEP_MayHoc
 pip install -r requirements.txt
-
+```
 ### 6.2. Thực hiện dự án
 
 Mở Jupyter Notebook và lần lượt thực hiện các tệp sau:
