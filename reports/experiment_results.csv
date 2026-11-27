@@ -1,0 +1,6 @@
+﻿Ma_thi_nghiem,Mo_hinh,Tham_so,MAE,RMSE,R2,Trang_thai
+TN02,Linear Regression,LinearRegression(),29.010181817149977,62.00530934862262,0.5361182529278998,Thành công
+TN03,Ridge Regression,StandardScaler + Ridge(alpha=1.0),29.0117237661321,62.00546370352639,0.5361159433672411,Thành công
+TN01,Baseline,DummyRegressor(strategy='mean'),52.688640161583486,91.05357767195113,-0.0003306056615977049,Thành công
+TN04,Random Forest,"n_estimators=100, max_depth=15",77.33247502984521,114.37379661793025,-0.5783474115160161,Thành công
+TN05,Gradient Boosting,"n_estimators=100, learning_rate=0.1, max_depth=3",110.90291400945321,144.9163165880349,-1.5338686637193089,Thành công
